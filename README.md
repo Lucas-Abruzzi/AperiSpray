@@ -2,7 +2,34 @@
 
 <img src="https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/Media/Cover-page.png" style="width:75%;">
 
+## Table of Contents
+- [Overview of Source](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#overview-of-source)
+    - [Schematic](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#schematic)
+    - [Parts List](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#parts-list)
+- [Source Construction](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#source-construction)
+    - [3D Printing](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#printing-parts)
+    - [Source Disassembly](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#source-disassembly)
+    - [Soldering Electronics](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#soldering-electronics)
+    - [Assembling the Shaft Assembly](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#assembling-the-shaft-assembly)
+    - [Assembling the High-Voltage Termination](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#assembling-the-high-voltage-termination)
+    - [Installing the Strip Mount](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#installing-the-strip-mount)
+    - [Installing Assembly in the ESI Housing](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#installing-assembly-in-the-esi-housing)
+- [Opensource Strip Construction](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#opensource-strip-construction)
+    - [Cutting Paper Strips](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#cutting-paper-strips)
+    - [Printing Strip Holder and Strip Holder Clips](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#printing-strip-holders-and-strip-holder-clips)
+    - [Assembling Strips](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#assembling-strips)
+- [Operating Instructions](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#operating-instructions)
+    - [Positioning Calibration Procedure](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#positioning-calibration-procedure)
+    - [Spray Solvent Delivery Set Up](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#spray-solvent-delivery-set-up)
+    - [Method Development](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#method-development)
+    - [Sample Preparation](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#sample-preparation)
+    - [Loading and Running a Paper Strip](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#loading-and-running-a-paper-strip)
+    - [Trouble Shooting](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#trouble-shooting)
+    - [Unloading Used Paper Strips](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#unloading-used-paper-strips)
+
 ## Overview of Source
+
+The AperiSpray is a low-cost, simple to use assembly that converts existing Thermo Scientific IonMax and OptaMax NG heated electrospray ionization (H-ESI) housings into paper spray ion sources, making use of 3D-printed parts and off-the-shelf hardware. AperiSpray features instrument-controlled high-voltage and spray solvent delivery and can use either in-house-built or commercially available paper spray strips. Many laboratories that perform routine LC-MS analyses already have surplus H-ESI sources available for conversion, and those that don’t, can purchase inexpensive used or defective housings from third party sellers, making AperiSpray a low-investment option for those wanting to experiment with PS-MS. Additionally, unlike the commercial PS-MS platform, AperiSpray is compatible with almost any Thermo Scientific mass spectrometer with an atmospheric pressure interface, allowing it to be coupled to high-resolution Orbitrap and time-of-flight instruments. 
 
 ### Schematic
 
@@ -260,7 +287,7 @@ Mount the positioning plates and shaft assembly to the ESI housing and replace t
 
 ### Cutting Paper Strips
 
-If you choose to make your own paper strips, you will need to have a method of cutting the strips out of the chromatography paper. Paper strips can be cut by hand using a razor blade, by custom die cutters, or by a laser cutter. Whichever technique is chosen, it is crucial that the tip of the paper is cut to a fine point without any fraying otherwise you may experience unstable spray. If using a laser cutter, we recommend rinsing the strips in deionized water prior to use to remove pyrolysis products generated from the heat of the laser. We have included an .svg file for laser cutting. Laser settings must be optimized for your specific laser cutter.
+If you choose to make your own paper strips, you will need to have a method of cutting the strips out of the chromatography paper. Paper strips can be cut by hand using a razor blade, by custom die cutters, or by a laser cutter. Whichever technique is chosen, it is crucial that the tip of the paper is cut to a fine point without any fraying otherwise you may experience unstable spray. If using a laser cutter, we recommend rinsing the strips in deionized water prior to use to remove pyrolysis products generated from the heat of the laser. We have included an [.svg](https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/SVG/Paper_strip.svg) file for laser cutting. Laser settings must be optimized for your specific laser cutter.
 
 ### Printing Strip Holders and Strip Holder Clips
 
