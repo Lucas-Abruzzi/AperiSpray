@@ -4,12 +4,13 @@
 
 ## Table of Contents
 - [Overview of Source](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#overview-of-source)
+    - [Disclaimer](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#disclaimer)
     - [Schematic](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#schematic)
     - [Parts List](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#parts-list)
 - [Source Construction](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#source-construction)
     - [3D Printing](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#printing-parts)
     - [Source Disassembly](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#source-disassembly)
-    - [Soldering Electronics](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#soldering-electronics)
+    - [Soldering the Electronics](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#soldering-electronics)
     - [Assembling the Shaft Assembly](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#assembling-the-shaft-assembly)
     - [Assembling the High-Voltage Termination](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#assembling-the-high-voltage-termination)
     - [Installing the Strip Mount](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#installing-the-strip-mount)
@@ -23,13 +24,17 @@
     - [Spray Solvent Delivery Set Up](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#spray-solvent-delivery-set-up)
     - [Method Development](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#method-development)
     - [Sample Preparation](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#sample-preparation)
-    - [Loading and Running a Paper Strip](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#loading-and-running-a-paper-strip)
+    - [Loading and Analyzing a Paper Strip](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#loading-and-running-a-paper-strip)
     - [Trouble Shooting](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#trouble-shooting)
     - [Unloading Used Paper Strips](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#unloading-used-paper-strips)
 
 ## Overview of Source
 
-The AperiSpray is a low-cost, simple to use assembly that converts existing Thermo Scientific IonMax and OptaMax NG heated electrospray ionization (H-ESI) housings into paper spray ion sources, making use of 3D-printed parts and off-the-shelf hardware. AperiSpray features instrument-controlled high-voltage and spray solvent delivery and can use either in-house-built or commercially available paper spray strips. Many laboratories that perform routine LC-MS analyses already have surplus H-ESI sources available for conversion, and those that don’t, can purchase inexpensive used or defective housings from third party sellers, making AperiSpray a low-investment option for those wanting to experiment with PS-MS. Additionally, unlike the commercial PS-MS platform, AperiSpray is compatible with almost any Thermo Scientific mass spectrometer with an atmospheric pressure interface, allowing it to be coupled to high-resolution Orbitrap and time-of-flight instruments. 
+The AperiSpray is a low-cost, simple to use assembly that converts existing Thermo Scientific OptaMax NG heated electrospray ionization (H-ESI) housings into paper spray ion sources, making use of 3D-printed parts and off-the-shelf hardware. AperiSpray features instrument-controlled high-voltage and spray solvent delivery and can use either in-house-built or commercially available paper spray strips. Many laboratories that perform routine LC-MS analyses already have surplus H-ESI sources available for conversion, and those that don’t, can purchase inexpensive used or defective housings from third party sellers, making AperiSpray a low-investment option for those wanting to experiment with PS-MS. Additionally, unlike the commercial PS-MS platform, AperiSpray is compatible with almost any Thermo Scientific mass spectrometer with an atmospheric pressure interface, allowing it to be coupled to high-resolution Orbitrap instruments. Although outside the scope of this document, components of this design could be adapted to construct PSI sources for instruments from other manufacturers.
+
+### Disclaimer
+
+Following these instructions may void instrument warranties, risk damage to instruments, and/or expose you to risk of electrical shock. Do so at your own risk. Do not perform modifications to the source while it is mounted to the instrument. Ensure that the instrument is in “standby” or “off” before attempting to load or unload a paper strip from the source and never raise the shaft while the spray voltage is turned on.
 
 ### Schematic
 
@@ -78,7 +83,7 @@ The AperiSpray is a low-cost, simple to use assembly that converts existing Ther
 ### Printing Parts
 
 #### Filament
-For the cap, shaft, shaft guide, electronics enclosure, and strip tray, most standard FDM filament materials are acceptable. We prefer carbon-fiber PLA because it is dimensionally stable, easy to print and has a desirable surface texture. For the strip mount and strip holders, we recommend a material that is resistant to solvent to prevent interference and instrument contamination. In normal operation of the source, the strip mount should not come in direct contact with spray solvent, so PLA or ABS can be used if necessary, however in our experience, solvent overflow will occasionally occur while calibrating solvent deposition rate and volume, so a solvent-resistant material is highly recommended. Strip holders come in contact with solvent during normal operation. Some good options for strip holders (and strip mounts) include natural polyoxymethylene (POM), and natural PA6 Nylon. We recommend natural glass fiber reinforced PA6 nylon as it is both chemically resistant and easy to print on consumer grade printers, whereas POM suffers from poor bed adhesion and severe warping.
+For the cap, shaft, shaft guide, electronics enclosure, and strip tray, most standard FDM filament materials are acceptable. We prefer carbon-fiber PLA because it is dimensionally stable, easy to print and has a desirable surface texture. For the strip mount and strip holders, we recommend a material that is resistant to solvent to prevent interference and instrument contamination. In normal operation of the source, the strip mount should not come in direct contact with spray solvent, so PLA or ABS can be used if necessary, however in our experience, solvent overflow will occasionally occur while calibrating solvent deposition rate and volume, so a solvent-resistant material is highly recommended. Strip holders come in contact with solvent during normal operation. Some good options for strip holders (and strip mounts) include natural polyoxymethylene (POM), and natural PA6 Nylon. We recommend natural glass fiber reinforced PA6 nylon as it is both chemically resistant and easy to print on consumer grade printers, whereas POM suffers from poor print-bed adhesion and severe warping.
 
 #### Printer Settings
 Printer settings are highly dependent on the filament material and printer. We recommend using your printer’s default print settings for the filament chosen and adjusting as necessary.
@@ -93,7 +98,7 @@ Print the shaft guide in an upright position. Tree support is recommended for th
 
 <ins>Shaft:</ins>
 
-We recommend printing the shat upright to ensure the surface that mates with the lead screw nut is flat. You will need support under the mounting bracket on the inside of the shaft. 
+We recommend printing the shaft upright to ensure the surface that mates with the lead screw nut is flat. You will need support under the mounting bracket on the inside of the shaft. 
 
 <img src="https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/Media/Shaft_sliced.JPG" style="width:75%;">
 
@@ -127,7 +132,7 @@ Remove the 4 screws holding the front plate on the source and pull the front pla
 
 <img src="https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/Media/Disassembly_1.jpg" style="width:50%;">
 
-Remove the metal cover protecting the electronics connections.
+Remove the metal cover protecting the electronic and pneumatic connections.
 
 <img src="https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/Media/Disassembly_2.jpg" style="width:50%;">
 
@@ -165,7 +170,7 @@ Loosen and remove the 4 nuts retaining the 10-pin Harting connector to the front
 
 Separate the connector from the front plate.
 
-### Soldering Electronics
+### Soldering the Electronics
 
 Add the nuts from the original Harting connector to the new one and mount the new connector to the front plate. Thread a 3/8-32 panel nut onto the HV plug to clamp it to the front plate and tighten it to prevent the HV plug from turning freely in the front plate. 
 
@@ -360,7 +365,7 @@ A diverse variety of sample types are amenable to paper spray mass spectrometry 
 
 Samples should be allowed to dry on the paper, either at ambient conditions or with the help of a drying oven or desiccator prior to analysis. 
 
-### Loading and Running a Paper Strip
+### Loading and Analyzing a Paper Strip
 
 To load a paper strip, raise the shaft to its upward position by pulling upwards on the cap. The shaft and cap rotate 90° clockwise in the shaft guide to allow strips to be loaded from the cutout in the right side of the shaft guide.
 
