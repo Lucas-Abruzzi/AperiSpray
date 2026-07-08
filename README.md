@@ -68,7 +68,7 @@ Following these instructions may void instrument warranties, risk damage to inst
 | Lead screw nut | 1 | mcmaster.com | [6350K683](https://www.mcmaster.com/products/6350k683/) | $31.63 | POM |
 | Mounting screws | 2 | mcmaster.com | [92196A151](https://www.mcmaster.com/products/92196a151/) | $0.11 | SS |
 | Set screw (strip-mount) | 1 | mcmaster.com | [92765A005](https://www.mcmaster.com/products/92765a005/) | $0.33 | Steel alloy |
-| HV contact screws | N/A* | mcmaster.com | [92949A174](https://www.mcmaster.com/products/92949a174/) | $0.07 | SS |
+| HV contact rivets | N/A* | aliexpress.com | [GB109](https://www.aliexpress.com/item/1005007409269038.html?spm=a2g0o.order_detail.order_detail_item.3.1618126aYynNxJ/) | $0.03 | Aluminum |
 | Chromatography paper | N/A* | Fishersci.ca | [057146](https://www.fishersci.ca/shop/products/whatman-31et-chr-chromatography-paper/057146?searchHijack=true&searchTerm=057146&searchType=RAPID&matchedCatNo=057146) | $0.02 | Cellulose |
 | PEEK nut | 1 | Coleparmer.ca | [0201343](https://www.coleparmer.ca/i/idex-fingertight-one-piece-long-thread-natural-peek-1-16-od-tubing-10-32-coned-10-pk/0201343?searchterm=0201343) | $11.32 | PEEK |
 | PEEK nut adapter | 1 | Coleparmer.ca | [0201420](https://www.coleparmer.ca/i/idex-threaded-adapter-peek-0-040-id-10-32-coned-f-to-1-4-28-flat-bottom-m/0201420) | $40.81 | PEEK |
@@ -262,7 +262,7 @@ Feed the PEEK terminus into the threaded hole in the 3D-printed strip mount, and
 
 <img src="https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/Media/Assembly_13.jpg" style="width:50%;">
 
-Insert a paper strip holder into the strip mount and ensure it is fully seated. If the paper strip holder does not slide in easily, you will need to increase the vertical tolerance by decreasing the “Strip_Height” variable in the FreeCAD [file](https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/FreeCAD/Opensource_strip-holder.FCStd) for the strip holder (if using opensource paper strips), or by increasing the “Strip_pocket_height” variable in the FreeCAD [file](https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/FreeCAD/Commercial_strip-mount.FCStd) for the strip mount (if using commercial paper strips). If the paper strip holder is loose in the strip mount, you will need to decrease tolerances. Slide the high voltage terminus into the strip mount until it contacts the rivet/screw on the paper strip assembly (look down along top of paper strip to ensure). Push it an additional mm to ensure good contact between pogo pin and rivet/screw, but not so far that the pogo pin is fully depressed. Tighten set screw on the side of the strip mount to fix the height of the high voltage contact.
+Insert a paper strip holder into the strip mount and ensure it is fully seated. If the paper strip holder does not slide in easily, you will need to increase the vertical tolerance by decreasing the “Strip_Height” variable in the FreeCAD [file](https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/FreeCAD/Opensource_strip-holder.FCStd) for the strip holder (if using opensource paper strips), or by increasing the “Strip_pocket_height” variable in the FreeCAD [file](https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/FreeCAD/Commercial_strip-mount.FCStd) for the strip mount (if using commercial paper strips). If the paper strip holder is loose in the strip mount, you will need to decrease tolerances. Slide the high voltage terminus into the strip mount until it contacts the rivet on the paper strip assembly (look down along top of paper strip to ensure). Push it an additional mm to ensure good contact between pogo pin and rivet/screw, but not so far that the pogo pin is fully depressed. Tighten set screw on the side of the strip mount to fix the height of the high voltage contact.
 
 <img src="https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/Media/Assembly_14.jpg" style="width:50%;">
 
@@ -310,7 +310,7 @@ Place a paper strip in a 3D-printed strip holder with the holes in the paper str
 
 <img src="https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/Media/Strip_1.png" style="width:50%;">
 
-Thread a 2/56 socket cap screw into the hole in the strip holder and tighten until the paper strip is clamped flat against the strip holder.
+Insert an M2 rivet into the hole in the paper strip and press down until the paper strip is clamped flat against the strip holder.
 
 <img src="https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/Media/Strip_2.png" style="width:50%;">
 
@@ -353,7 +353,7 @@ The source should be recognized by the instrument as an ESI source. Develop the 
 
 Spray solvent should be selected based on the matrix that your sample is in and the analytes of interest. Refer to the literature for examples of spray solvent composition for different applications.
 
-Program solvent delivery to start at the beginning of the method before voltage turns on to give the analytes time to dissolve into the solvent and the solvent time to wick to the tip of the paper. It takes approximately 80 µL of spray solvent to wet a paper strip, so the solvent flow rate will determine the amount of time needed to pre-wet the paper. Exact solvent flow rates and deposition volumes can be altered to optimize sensitivity and achieve stable spray for the desired method duration. The amount of solvent on the paper can affect the spray mode, which in turn affects ionization and transmission efficiency.
+Program solvent delivery to start at the beginning of the method before voltage turns on to give the analytes time to dissolve into the solvent and the solvent time to wick to the tip of the paper. It takes approximately 120 µL of spray solvent to wet a paper strip, so the solvent flow rate will determine the amount of time needed to pre-wet the paper. Exact solvent flow rates and deposition volumes can be altered to optimize sensitivity and achieve stable spray for the desired method duration. The amount of solvent on the paper can affect the spray mode, which in turn affects ionization and transmission efficiency. A good starting point is a flow rate of 300 µl/min for 0.4 minutes.
 
 Program the voltage to come on once the paper strip is wet. We recommend optimizing spray voltage for the spray solvent, sample matrix, and analytes you are interested in, but 3600 – 4000 V are typical for paper spray methods in positive mode. Negative-mode paper spray requires lower spray voltages to prevent corona discharge and charring of the paper. The duration of high voltage depends on the desired length of the method. Paper spray methods can range from a few seconds to several minutes.
 
@@ -379,13 +379,22 @@ The strip is now loaded, and you can run the instrument method. You should get a
 
 ### Trouble Shooting
 
-If the signal doesn’t come on, there is either a problem with the electrical contact, the solvent delivery, or the positioning of the strip. Try the following steps in order:
+A common issue is solvent overflow caused by excess solvent deposition. This will be noticeable when switching strips as the sides and bottom of strips will be wet with solvent. When this occurs, reduce either the solvent flow rate or the duration of deposition.
 
--	With the voltage turned off, raise the shaft to the upward position and visually inspect the paper strip for solvent. It should be saturated with solvent but not overflowing or forming a drop at the tip. If there is no solvent, prime your syringe pump to remove air and check your instrument method to confirm it is programmed correctly to deliver solvent. You may need to increase the solvent delivery rate / duration.
--	If the paper looks saturated with solvent and there is still no signal, try moving the shaft assembly forward to decrease the inlet gap.
--	If there is still no signal, remove the source from the instrument and use a multimeter to confirm continuity between the pogo pin and the HV plug. There should be approximately 22 MΩ of resistance. If there is no continuity, remove the electronics enclosure and determine where the connection is broken.
--	If the HV line has appropriate resistance, check your instrument method to confirm the voltage and scan parameters are correctly programmed.
--	If the signal onset is delayed or choppy, try increasing the voltage onset delay or move the shaft assembly forward or back.
+If the signal doesn’t come on, there is either a problem with the instrument method, the electrical contact, the solvent delivery, or the positioning of the strip. Try the following steps in order:
+
+With the voltage turned off, raise the shaft to the upward position and visually inspect the paper strip for solvent. It should be saturated with solvent but not overflowing or forming a drop at the tip. If there is no solvent, prime your syringe pump to remove air and check your instrument method to confirm it is programmed correctly to deliver solvent. You may need to increase the solvent delivery rate / duration.
+
+If solvent is flowing but the paper is not getting wet, solvent may be wicking up the outside of the PEEK tubing into the strip mount. To resolve this, increase the inner diameter of the PEEK tubing.
+
+If the paper looks saturated with solvent and there is still no signal, try moving the shaft assembly forward to decrease the inlet gap.
+
+If there is still no signal, remove the source from the instrument and use a multimeter to confirm continuity between the pogo pin and the HV plug. There should be approximately 22 MΩ of resistance. If there is no continuity, remove the electronics enclosure and determine where the connection is broken.
+
+If the HV line has appropriate resistance, check your instrument method to confirm the voltage and scan parameters are correctly programmed.
+
+If the signal onset is delayed or choppy, try increasing the voltage onset delay or move the shaft assembly forward or back.
+
 
 ### Unloading Used Paper Strips
 
