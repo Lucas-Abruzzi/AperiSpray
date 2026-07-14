@@ -15,18 +15,18 @@
     - [Assembling the High-Voltage Termination](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#assembling-the-high-voltage-termination)
     - [Installing the Strip Mount](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#installing-the-strip-mount)
     - [Installing Assembly in the ESI Housing](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#installing-assembly-in-the-esi-housing)
-- [Opensource Strip Construction](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#opensource-strip-construction)
+- [Opensource Strip Cartridge Construction](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#opensource-strip-cartridge-construction)
     - [Cutting Paper Strips](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#cutting-paper-strips)
     - [Printing Strip Holder and Strip Holder Clips](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#printing-strip-holders-and-strip-holder-clips)
-    - [Assembling Strips](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#assembling-strips)
+    - [Assembling Strip Cartridges](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#assembling-strip-cartridges)
 - [Operating Instructions](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#operating-instructions)
     - [Positioning Calibration Procedure](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#positioning-calibration-procedure)
     - [Spray Solvent Delivery Set Up](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#spray-solvent-delivery-set-up)
     - [Method Development](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#method-development)
     - [Sample Preparation](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#sample-preparation)
-    - [Loading and Analyzing a Paper Strip](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#loading-and-running-a-paper-strip)
+    - [Loading and Analyzing a Strip Cartridge](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#loading-and-analyzing-a-strip-cartridge)
     - [Trouble Shooting](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#trouble-shooting)
-    - [Unloading Used Paper Strips](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#unloading-used-paper-strips)
+    - [Unloading Used Strip Cartridges](https://github.com/Lucas-Abruzzi/AperiSpray/tree/main#unloading-used-strip-cartridges)
 
 ## Overview of Source
 
@@ -34,7 +34,7 @@ The AperiSpray is a low-cost, simple to use assembly that converts existing Ther
 
 ### Disclaimer
 
-Following these instructions may void instrument warranties, risk damage to instruments, and/or expose you to risk of electrical shock. Do so at your own risk. Do not perform modifications to the source while it is mounted to the instrument. Ensure that the instrument is in “standby” or “off” before attempting to load or unload a paper strip from the source and never raise the shaft while the spray voltage is turned on.
+Following these instructions may void instrument warranties, risk damage to instruments, and/or expose you to risk of electrical shock. Do so at your own risk. Do not perform modifications to the source while it is mounted to the instrument. Ensure that the instrument is in “standby” or “off” before attempting to load or unload a strip cartridge from the source and never raise the shaft while the spray voltage is turned on.
 
 ### Schematic
 
@@ -124,7 +124,7 @@ The strip mount is best printed upside down with support under the ridge, in the
 
 <ins>Calibration Strips:</ins>
 
-Calibration strips are for calibrating the strip position relative to the inlet of the mass spectrometer. They are inserted into the strip pocket on the strip mount and extend to where the opening of the inlet should be relative to the strip mount. By default, the calibration strips extend 4 mm further from the strip mount than actual paper strips would to create a 4 mm gap between paper strips and the inlet when used to calibrate positioning. If a larger or smaller gap is desired, the FreeCAD file for the calibration strips can be modified by increasing or decreasing the “Inlet_gap” variable in the variable set. Print calibration strips out of whatever filament you have on hand. They are best printed in an upright position with the backside against the print bed. Support is only necessary on the calibration strip for the commercial strip mount.
+Calibration strips are for calibrating the paper strip position relative to the inlet of the mass spectrometer. They are inserted into the strip pocket on the strip mount and extend to where the opening of the inlet should be relative to the strip mount. By default, the calibration strips extend 4 mm further from the strip mount than actual paper strips would to create a 4 mm gap between paper strips and the inlet when used to calibrate positioning. If a larger or smaller gap is desired, the FreeCAD file for the calibration strips can be modified by increasing or decreasing the “Inlet_gap” variable in the variable set. Print calibration strips out of whatever filament you have on hand. They are best printed in an upright position with the backside against the print bed. Support is only necessary on the calibration strip for the commercial strip mount.
 
 ### Source Disassembly
 
@@ -248,7 +248,7 @@ Slide the plastic tube down onto the splines of the pogo pin and heat shrink whe
 
 ### Installing the Strip Mount
 
-(procedure is the same whether using the commercial paper strips or paper strips produced in-house).
+(procedure is the same whether using the commercial strip cartridges or strip cartridges produced in-house).
 
 Feed PEEK tubing and the HV terminus through the holes on the top surface of the cap and down through the shaft.
 
@@ -262,7 +262,7 @@ Feed the PEEK terminus into the threaded hole in the 3D-printed strip mount, and
 
 <img src="https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/Media/Assembly_13.jpg" style="width:50%;">
 
-Insert a paper strip holder into the strip mount and ensure it is fully seated. If the paper strip holder does not slide in easily, you will need to increase the vertical tolerance by decreasing the “Strip_Height” variable in the FreeCAD [file](https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/FreeCAD/Opensource_strip-holder.FCStd) for the strip holder (if using opensource paper strips), or by increasing the “Strip_pocket_height” variable in the FreeCAD [file](https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/FreeCAD/Commercial_strip-mount.FCStd) for the strip mount (if using commercial paper strips). If the paper strip holder is loose in the strip mount, you will need to decrease tolerances. Slide the high voltage terminus into the strip mount until it contacts the rivet on the paper strip assembly (look down along top of paper strip to ensure). Push it an additional mm to ensure good contact between pogo pin and rivet/screw, but not so far that the pogo pin is fully depressed. Tighten set screw on the side of the strip mount to fix the height of the high voltage contact.
+Insert a paper strip holder into the strip mount and ensure it is fully seated. If the paper strip holder does not slide in easily, you will need to increase the vertical tolerance by decreasing the “Strip_Height” variable in the FreeCAD [file](https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/FreeCAD/Opensource_strip-holder.FCStd) for the strip holder (if using opensource strip cartridges), or by increasing the “Strip_pocket_height” variable in the FreeCAD [file](https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/FreeCAD/Commercial_strip-mount.FCStd) for the strip mount (if using commercial strip cartridges). If the paper strip holder is loose in the strip mount, you will need to decrease tolerances. Slide the high voltage terminus into the strip mount until it contacts the rivet on the strip cartridge (look down along top of paper strip to ensure). Push it an additional mm to ensure good contact between pogo pin and rivet, but not so far that the pogo pin is fully depressed. Tighten set screw on the side of the strip mount to fix the height of the high voltage contact.
 
 <img src="https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/Media/Assembly_14.jpg" style="width:50%;">
 
@@ -284,11 +284,11 @@ Slide the positioning plates over the shaft assembly and seat them on the shaft 
 
 <img src="https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/Media/Assembly_18.jpg" style="width:50%;">
 
-Mount the positioning plates and shaft assembly to the ESI housing and replace the 4 mounting screws. Replace the left thumbscrew only, to allow easier access to the loading port in the shaft guide when loading and unloading strips.
+Mount the positioning plates and shaft assembly to the ESI housing and replace the 4 mounting screws. Replace the left thumbscrew only, to allow easier access to the loading port in the shaft guide when loading and unloading strip cartridges.
 
 <img src="https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/Media/Assembly_19.jpg" style="width:50%;">
 
-## Opensource Strip Construction
+## Opensource Strip Cartridge Construction
 
 ### Cutting Paper Strips
 
@@ -304,7 +304,7 @@ Print the strip tray laying flat. Support is recommended for the overhangs.
 
 <img src="https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/Media/Strip-tray_sliced.JPG" style="width:50%;">
 
-### Assembling Strips
+### Assembling Strip Cartridges
 
 Place a paper strip in a 3D-printed strip holder with the holes in the paper strip and strip holder aligned.
 
@@ -318,7 +318,7 @@ Slide a 3D-printed strip holder clip over the end of the paper strip and onto th
 
 <img src="https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/Media/Strip_3.png" style="width:50%;">
 
-Put each assembled strip into a 3D-printed strip tray for storage until use. 
+Put each assembled strip cartridge into a 3D-printed strip tray for storage until use. 
 
 ## Operating Instructions
 
@@ -344,7 +344,7 @@ The following instructions assume familiarity with instrument software and gener
 
 ### Spray Solvent Delivery Set Up
 
-The free end of the PEEK tubing can be terminated with a Luer-Lok adapter and connected to a 10 mL glass syringe filled with the desired spray solvent. We recommend priming the solvent delivery line before mounting the first strip to be run to remove air from the solvent line. 
+The free end of the PEEK tubing can be terminated with a Luer-Lok adapter and connected to a 10 mL glass syringe filled with the desired spray solvent. We recommend priming the solvent delivery line before mounting the first strip cartridge to be run to remove air from the solvent line. 
 Using a syringe pump connected to the instrument allows solvent delivery to be programmed into the instrument method along with voltage and scan parameters.
 
 ### Method Development
@@ -365,23 +365,23 @@ A diverse variety of sample types are amenable to paper spray mass spectrometry 
 
 Samples should be allowed to dry on the paper, either at ambient conditions or with the help of a drying oven or desiccator prior to analysis. 
 
-### Loading and Analyzing a Paper Strip
+### Loading and Analyzing a Strip Cartridge
 
-To load a paper strip, raise the shaft to its upward position by pulling upwards on the cap. The shaft and cap rotate 90° clockwise in the shaft guide to allow strips to be loaded from the cutout in the right side of the shaft guide.
+To load a strip cartridge, raise the shaft to its upward position by pulling upwards on the cap. The shaft and cap rotate 90° clockwise in the shaft guide to allow strip cartridges to be loaded from the cutout in the right side of the shaft guide.
 
 <img src="https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/Media/Loaded_strip.jpg" style="width:50%;">
 
-Ensure the strip is properly seated in the strip mount and slide the shaft to the bottom of its travel. The bottom of the cap should be flush with the top of the shaft guide.
+Ensure the strip cartridge is properly seated in the strip mount and slide the shaft to the bottom of its travel. The bottom of the cap should be flush with the top of the shaft guide.
 
-The strip is now loaded, and you can run the instrument method. You should get a sharp increase in signal when the voltage turns on and a sharp decrease in signal when the voltage turns off.
+The strip cartridge is now loaded, and you can run the instrument method. You should get a sharp increase in signal when the voltage turns on and a sharp decrease in signal when the voltage turns off.
 
 <img src="https://github.com/Lucas-Abruzzi/AperiSpray/blob/main/Media/Chronogram.JPG" style="width:50%;">
 
 ### Trouble Shooting
 
-A common issue is solvent overflow caused by excess solvent deposition. This will be noticeable when switching strips as the sides and bottom of strips will be wet with solvent. When this occurs, reduce either the solvent flow rate or the duration of deposition.
+A common issue is solvent overflow caused by excess solvent deposition. This will be noticeable when changing strip cartridges as the sides and bottom of the strip holder will be wet with solvent. When this occurs, reduce either the solvent flow rate or the duration of deposition.
 
-If the signal doesn’t come on, there is either a problem with the instrument method, the electrical contact, the solvent delivery, or the positioning of the strip. Try the following steps in order:
+If the signal doesn’t come on, there is either a problem with the instrument method, the electrical contact, the solvent delivery, or the positioning of the paper strip relative to the inlet. Try the following steps in order:
 
 With the voltage turned off, raise the shaft to the upward position and visually inspect the paper strip for solvent. It should be saturated with solvent but not overflowing or forming a drop at the tip. If there is no solvent, prime your syringe pump to remove air and check your instrument method to confirm it is programmed correctly to deliver solvent. You may need to increase the solvent delivery rate / duration.
 
@@ -396,8 +396,6 @@ If the HV line has appropriate resistance, check your instrument method to confi
 If the signal onset is delayed or choppy, try increasing the voltage onset delay or move the shaft assembly forward or back.
 
 
-### Unloading Used Paper Strips
+### Unloading Used Strip Cartridges
 
-To unload a strip, raise the shaft to the upward position and use gloved fingers or forceps to extract the used paper strip. Used strips can be discarded.
-
-If there is solvent in the strip well on the strip mount, lower the solvent deposition volume for subsequent runs to prevent carryover.
+To unload a strip cartridge after data has been acquired and the high voltage is turned off, raise the shaft to the upward position and use gloved fingers or forceps to extract the used strip cartridge. If there is solvent in the strip well on the strip mount, lower the solvent deposition volume for subsequent runs to prevent carryover. The high-voltage contact rivets can be washed and re-used, but the rest of the strip cartridge should be properly disposed of.
