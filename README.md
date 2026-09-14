@@ -104,7 +104,7 @@ We recommend printing the shaft upright to ensure the surface that mates with th
 
 <ins>Cap:</ins>
 
-The cap should be printed upside down with the top face against the build plate. No support is necessary. 
+The cap should be printed upside down with the top face against the build plate. No support is necessary. We recommend using a contrasting filament for the warning text and HV symbol if multi-filament printing is available. 
 
 <ins>Electronics enclosure:</ins>
 
